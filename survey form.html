@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIRLA-FJULIS Survey Form</title>
+<link rel="stylesheet" href="index.css">
+<script src='index.js'></script>
+</head>
+ <body>
+
+  <script>
+// coded by @SamAI-Software
+const projectName = 'survey-form';
+localStorage.setItem('example_project', 'Survey Form');
+</script>
+<h1 id="title">SIRLA-FJULIS</h1>
+<h2 id="title">SURVEY FORM</h2>
+<div id="form-outer">
+  <h3 id="title">讓我們多了解你(*´ω`)人(´ω`*)</h3>
+  <p id="description"></p>
+  <form id="survey-form" method="GET" action=" ">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">* 姓名: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="請輸入您的大名 EX：王大明" required>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="email-label" for="email">* Email: </label>
+      </div>
+      <div class="rightTab">
+        <input type="email" name="email" id="email" class="input-field" required placeholder="請輸入您的Email">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="age">* 年齡: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="請輸入您的年齡(足歲)">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">以下哪個選項最能形容你現在的狀態或角色？</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled selected value>請選擇一個選項</option>
+      <option  value="student">學生</option>
+      <option value="job">全職工作</option>
+      <option value="learner">全心投入學習的學習者</option>
+      <option value="preferNo">我不想告訴你</option>
+      <option value="other">其他</option>
+    </select>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="userRating">* 你會向別人推薦SIRLA嗎？</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>這是一定的！<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>也許吧<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>我自己也不確定我自己會做出甚麼事情<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="most-like">在SIRLA學習項目中你最喜歡甚麼部分？ </label>
+      </div>
+      <div class="rightTab">
+        <select id="most-like" name="mostLike" class="dropdown">
+      <option disabled selected value>請選擇一個選項</option>
+      <option value="linux">Linux系統(系統操作、系統操作、伺服器架設)</option>
+      <option value="web">網站系統(前端、後端、框架)</option>
+      <option value="project">專案實作(專案研究、教材製作、成品實作)</option>
+    </select>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">你期望在SIRLA中學到甚麼？<br>(可複選
+        ): </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">教學技巧</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">溝通互動</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">各項程式撰寫</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">教材製作</label></li>
+          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">網站架設</label></li>
+          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Linux系統操作</label></li>
+          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">專案研究與製作</label></li>
+          <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">發表與教學</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">為什麼想學習程式？</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="為了錢？興趣？(*´∀`)~♥"></textarea>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">為什麼想加入SIRLA？</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="因為夜貓帥？土豆帥？被統資夯姊的魅力迷住？(*´∀`)~♥"></textarea> 
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">想給予我們甚麼建議？</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="你的建議能使我們更加進步d(`･∀･)b"></textarea>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+</body>
