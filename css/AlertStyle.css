@@ -1,0 +1,29 @@
+/* alert */
+.alert {
+	padding: 20px;
+	position: fixed;
+	top: 5px;
+	left: 2%;
+	width: 96%;
+	background-color: green;
+	opacity: 0.6;
+	color: white;
+	margin-bottom: 15px;
+}
+
+/* Close button design */
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+/* While the cursor stop at the close button, change the colour */
+.closebtn:hover {
+	color: black;
+}

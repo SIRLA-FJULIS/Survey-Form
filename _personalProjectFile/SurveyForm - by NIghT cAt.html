@@ -2,15 +2,22 @@
 <html>
 <head>
 	<title>Survey Form - by NIghT cAt</title>
-
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 	<script>
 		//Coded by @SamAI-Software
 		const projectName = 'survey-form';
 		localStorage.setItem('example_project', 'Survey Form');
 	</script>
-
+	
 	<style>
-		/* What is import */
+		/* 
+		 * REFERENCE:
+		 * 1. https://www.w3schools.com/cssref/pr_import_rule.asp
+		 * 2. http://muki.tw/tech/css-media-queries-introduce-basic/
+		 * 
+		 * SYNTAX: 
+		 * @import [url | string] (list-of-media_queries)
+		 */
 		@import url(https://fonts.googleapis.com/css?family=Raleway:400, 500);
 
 		html, body {
@@ -22,7 +29,13 @@
 
 		header {
 			font-size: 2em;
-			/* What is em */
+		   	/* REFERENCE:
+		   	 * https://www.w3.org/Style/Examples/007/units.zh_HK.html
+		   	 *
+		   	 * Unit in CSS:
+		   	 * 1. 1 px = 1 pixel
+			 * 2. 1 em = 2 inches
+			 */
 			font-weight: bold;
 			margin: 20px;
 		}
@@ -248,67 +261,57 @@
 					<ul id="preferences" style="list-style: none;">
 						<li class="checkbox">
 							<label>
-								<input name="prefer" value="1" type="checkbox" class="userRatings">
-								Front-end Projects
-							</label>
-						</li>
-						<li class="checkbox">
-							<!--Only this item doesn't have label label-->
-							<input name="prefer" value="2" type="checkbox" class="userRatings">
-							Back-end Projects
-						</li>
-						<li>
-							<label>
-								<input name="prefer" value="3" type="checkbox" class="userRatings">
-								Data Visualization
+								<input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects
 							</label>
 						</li>
 						<li class="checkbox">
 							<label>
-								<input name="prefer" value="4" type="checkbox" class="userRatings">
-								Challenges
+								<input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects
+							</label>
+						</li>
+						<li>
+							<label>
+								<input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization
 							</label>
 						</li>
 						<li class="checkbox">
 							<label>
-								<input name="prefer" value="5" type="checkbox" class="userRatings">
-								Open Source Community
+								<input name="prefer" value="4" type="checkbox" class="userRatings">Challenges
+							</label>
+						</li>
+						<li class="checkbox">
+							<label>
+								<input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="6" type="checkbox" class="userRatings">
-								Gitter help rooms
+								<input name="prefer" value="6" type="checkbox" class="userRatings">Gitter help rooms
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="7" type="checkbox" class="userRatings">
-								Videos
+								<input name="prefer" value="7" type="checkbox" class="userRatings">Videos
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="8" type="checkbox" class="userRatings">
-								City Meetups
+								<input name="prefer" value="8" type="checkbox" class="userRatings">City Meetups
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="9" type="checkbox" class="userRatings">
-								Wiki
+								<input name="prefer" value="9" type="checkbox" class="userRatings">Wiki
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="10" type="checkbox" class="userRatings">
-								Forum
+								<input name="prefer" value="10" type="checkbox" class="userRatings">Forum
 							</label>
 						</li>
 						<li>
 							<label>
-								<input name="prefer" value="10" type="checkbox" class="userRatings">
-								Additional Courses
+								<input name="prefer" value="10" type="checkbox" class="userRatings">Additional Courses
 							</label>
 						</li>
 					</ul>
