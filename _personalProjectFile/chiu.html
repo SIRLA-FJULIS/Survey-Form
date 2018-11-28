@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <div id="form-outer">
+        <p id="description"><!--id有沒有好像沒差-->
+            Let us know how we can improve freeCodeCamp
+        </p>
+        <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+        <!--id有沒有好像沒差 action="送出目的地" method="資料傳送方式" 
+            method="GET"把要傳遞的資訊寫在信封(http-header)上，直接將要傳送的資料以 Query String加在URL後面。-->
+            <div class="rowTab"><!--似乎是讓他們對齊的東西-->
+                <div class="labels">
+                    <label id="name-label" for="name">* Name: </label><!--為鼠標用戶改進可用性，選擇該標籤時，流覽器就會自動跳轉到相關的表單控制項上-->
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                    <!--autofocus->規定輸入欄位在頁面載入時自動獲得焦點。（一開始預設輸入的地方）（不適用於 type="hidden"） 
+                    type="text"文字輸入欄位（type->欄位型別） name->定義input元素的名稱 placeholder->幫助用戶填寫欄位的提示 required->輸入欄位的值是必需的-->
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="email-label" for="email">* Email: </label>
+                </div>
+                <div class="rightTab">
+                    <input id="email" type="email" name="email" class="input-field" required placeholder="Enter your Email">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="age">* Age </label>
+                </div>
+                <div class="rightTab">
+                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="currentPos">Which option best describes your current role?</label>
+                </div>
+                <div class="rightTab">
+                    <select name="currentPos" id="dropdown" class="dropdown"><!--select下拉選單 option設定下拉選單的選項-->
+                        <option disabled value>Select an option</option><!--disabled規定此選項應在首次載入時被禁用-->
+                        <option value="student">Student</option><!--value定義送往伺服器的選項值-->
+                        <option value="job">Full Time Job</option>
+                        <option value="learner">Full Time Learner</option>
+                        <option value="preferNo">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>                
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?</label><!--for近似id-->
+                </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;"><!--沒有記號 設定在清單中，每一條之前的記號要用什麼-->
+                        <li class="radio"><label>Definitely<input name="radio-buttons" value="1" type="radio" class="userRatings"></label></li>
+                        <!--type="radio" 選項按鈕 設定 <input type="radio"> 的 name 都是一樣的， form 就會自動判斷為一整組，讓使用者僅能選擇一個
+                        value input元素的值 定義與 input 元素相關的值，當提交表單時該值會發送到表單的 action URL-->
+                        <li class="radio"><label>Maybe<input name="radio-buttons" value="2" type="radio" class="userRatings"></label></li>
+                        <li class="radio"><label>Not sure<input name="radio-buttons" value="3" type="radio" class="userRatings"></label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="most-like">What do you like most in FCC:</label>
+                </div>
+                <div class="rightTab">
+                    <select id="most-like" name="mostlike" class="dropdown">
+                        <option disabled selected value>Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="openSource">Open Source</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">Things that should be improved in the future<br>(Check all that apply): </label><!--br空標籤-->
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
+                        <!--type="checkbox"核取方塊，通常用來製作多選項的表單-->
+                        <li class="checkbox"><input type="checkbox" name="prefer" value="2" class="userRatings">Back-end Projects</li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="3" class="userRatings">Data Visualization</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="4" class="userRatings">Challenges</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="5" class="userRatings">Open Source Community</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="6" class="userRatings">Gitter help rooms</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="7" class="userRatings">Videos</label></li>
+                        <li class="checkbox"><label><input type="checkbox" value="8" name="prefer" class="userRatings">City Meetups</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="9" class="userRatings">Wiki</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="10" class="userRatings">Forum</label></li>
+                        <li class="checkbox"><label><input type="checkbox" name="prefer" value="10" class="userRatings">Additional Courses</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">Any Comments or Suggestions?</label>
+                </div>
+                <div class="rightTab">
+                    <textarea name="comment" id="comments" class="input-field" style="height:50px; resize:vertical;" placeholder="Enter your comment here..."></textarea>
+                    <!--textarea多行的文字輸入欄位 resize:vertical可以調整元素的高度 resize可以由使用者調整 div 元素的大小-->
+                </div>
+            </div>
+            <button id="submit" type="submit">Submit</button><!--送出表單的按鈕 type="submit"送出表單-->
+        </form>
+    </div>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);/*@import匯入套用 加入多個 CSS 樣式*/
+
+        html,
+        body{
+            background-color: #a9d7d1;
+            text-align: center;/*文字置中 規定元素中的文本的水平對齊方式*/
+            font-family: 'Raleway', Helvetica, sans-serif;/*規定網頁字型的標準方法，可同時設定多組字型，當瀏覽器沒有第一種字型的時候，會自動顯示第二種字型*/
+            min-width: 320px;
+        }
+        header{
+            font-size: 2em;/*文字大小*/
+            font-weight: bold;/*粗體字 文字的粗細*/
+            margin: 20px;
+        }
+        #form-outer{
+            background-color: rgb(250, 250, 250);
+            margin: auto;/*外邊界距離 auto讓瀏覽器自己去設定*/
+            border-radius: 100px;/*圓角功能*/
+            width: 75%;
+            max-width: 900px;/*處理當瀏覽器視窗小於元素寬度*/
+            padding: 10px;/*內邊距*/
+            padding-top: 20px;/*上内邊距*/
+        }
+        .labels{
+            display: inline-block;/*定義元素在同一行呈現，也就是圖片或文字均不換行的意思*/
+            text-align: right;/*文字向右對齊*/
+            width: 40%;
+            padding: 5px;
+            vertical-align: top;/*元素垂直對齊該行元素的最高位置 設計網頁中元素(圖片)在垂直方向的對齊方式 沒有好像也無所謂*/
+            margin-top: 10px;/*上邊界*/
+        }
+        .rightTab{
+            display: inline-block;
+            text-align: left;/*文字向左對齊*/
+            width: 48%;
+            vertical-align: middle;/*元素垂直置中該行元素*/
+            /*vertical-align: top;*/
+        }
+        .input-field{
+            height: 20px;
+            width: 280px;
+            padding: 5px;
+            margin: 10px;
+            border: 1px #c0c0c0 solid;/*邊框為1px，顏色，實線 border: 邊框粗細 邊框顏色 邊框樣式*/
+            border-radius: 2px;
+        }
+        #userAge{
+            width: 40px;
+        }
+        .userRatings,
+        input[type="checkbox"]{
+            float: left;/*區塊置左，元素繞區塊 定義區塊的浮動*/
+            margin-right: 5px;/*右邊界*/
+        }
+        #submit{
+            background-color: #555555;
+            border-radius: 4px;
+            color: white;
+            font-size: 1em;/*文字大小*/
+            height: 40px;
+            width: 96px;
+            margin: 10px;
+            border: 0px solid;/*無邊框，實線 border: 邊框粗細 邊框顏色 邊框樣式*/
+        }
+        .dropdown{
+            height: 35px;
+            width: 140px;
+            padding: 5px;
+            margin: 10px;
+            margin-top: 15px;
+            border: 1px solid #c0c0c0;
+            border-radius: 2px;
+        }
+        .radio, .checkbox{
+            position: relative;/*相對位置 設定元素位置*/
+            left: -43px;
+            margin-left: 10px;
+            display: block;/*元素會以區塊方式呈現，除非設定 position 或 float*/
+            padding-bottom: 10px;
+        }
+        @media screen and (max-width: 833px){/*@media 針對不同的媒體類型定義不同的樣式 文檔寬度小於 833 圖元則照{}裡面修改
+        screen 用於電腦螢幕，平板電腦，智慧手機等*/
+            .input-field{
+                width: 80%;
+            }
+            select{
+                width: 90%
+            }
+        }
+        @media screen and (max-width: 520px){
+            .labels{
+                width: 100%;
+                text-align: left;
+            }
+            .rightTab{
+                width: 80%;
+                float: left;
+            }
+            .input-field{
+                width: 100%;
+            }
+            select{
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        const projectName = 'survey-form';//用const定義的變量表現得像let變量，除了它們不能被重新賦值
+        localStorage.setItem('example_project', 'Survey Form');//localStorage 是以key-value方式儲存資料，所儲存的東西沒有限制。
+        //localStorage的資料不會隨著使用者關閉瀏覽器而消失，除非使用者清空localStorage或程式設計者執行clear或removeItem，他們將一直存在不會消失
+        //setItem 用DOMString key將value拿出
+    </script><!--其實不太理解差了啥-->
+</body>
