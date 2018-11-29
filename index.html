@@ -19,6 +19,7 @@
     <h2 id="title">SURVEY FORM</h2>
     <div id="form-outer">
     <h3 id="title">讓我們多了解你(*´ω`)人(´ω`*)</h3>
+    <h4 id="title">總共有三個部分~希望您能耐心的填完~以下為第一部分：初次見面你好</h4>
     <p id="description"></p>
     <form id="survey-form" method="GET" action=" ">
 
@@ -68,7 +69,22 @@
             </select>
         </div>
     </div>
+ 
 
+        <div class="rowTab">
+        <div class="labels">
+          <label for="preferences">JavaScript<br></label>
+        </div>
+
+        <div class="rightTab">
+            <ul id="preferences" style="list-style: none;">
+                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+             </ul>
+        </div>
+        </div>
     <div class="rowTab">
         <div class="labels">
             <label for="userRating">* 你會向別人推薦SIRLA嗎？</label>
@@ -116,44 +132,14 @@
              </ul>
       </div>
     </div>
-
-    <div class="rowTab">
-        <div class="labels">
-            <label for="comments">為什麼想學習程式？</label>
-        </div>
-
-        <div class="rightTab">
-          <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="為了錢？興趣？(*´∀`)~♥"></textarea>
-        </div>
-    </div>
-
-    <div class="rowTab">
-        <div class="labels">
-            <label for="comments">為什麼想加入SIRLA？</label>
-        </div>
-
-        <div class="rightTab">
-            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="因為夜貓帥？土豆帥？被統資夯姊的魅力迷住？(*´∀`)~♥"></textarea> 
-        </div>
-    </div>
-
-    <div class="rowTab">
-        <div class="labels">
-            <label for="comments">想給予我們甚麼建議？</label>
-        </div>
-
-        <div class="rightTab">
-            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="你的建議能使我們更加進步d(`･∀･)b"></textarea>
-        </div>
-    </div>
-
-    <!--
+   <!--
     <form>
-        <input class="MyButton" type="button" value="Next" onclick="window.location.href='.html'" />
+        <input class="submit" type="button" value="Next" onclick="window.location.href='index2.html'" />
     </form>
     -->
         <!--<input type ="button" onclick="javascript:location.href='thank you.html'" value="下一頁"></input>-->
-        <button id="submit" type="submit" onclick="javascript:location.href='final.html'">Submit</button>
+       <button id="submit" type="button" onclick="window.history.go(1).href='index2.html'">Next</button>
+       <!--若type為submit會無法跳往下一頁(縱使都填資料了)，所以梗成button。但改成button似乎只是單純會往那頁過去而無法將資料回存至伺服器，不知道該怎麼辦QWQ。最後，我也有研究可以回上一頁或下一頁資料仍保留的寫法，但似乎依然要用BUTTON-->
     </form>
   </div>
 
