@@ -1,145 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>SIRLA-FJULIS Survey Form</title>
-<link rel="stylesheet" href="css/AlertStyle.css">
-<link rel="stylesheet" href="css/IndexStyle.css">
-<script src='js/IndexJS.js'></script>
+    <meta charset="utf-8">
+    <title>SIRLA-FJULIS Survey Form</title>
+    <link rel="stylesheet" href="css/IndexStyle.css">
+    <script src='js/IndexJS.js'></script>
 </head>
-<body>
 
+<body>
     <script>
-    // coded by @SamAI-Software
-    const projectName = 'survey-form';
-    localStorage.setItem('example_project', 'Survey Form');
+        // coded by @SamAI-Software
+        const projectName = 'survey-form';
+        localStorage.setItem('example_project', 'Survey Form');
     </script>
 
     <h1 id="title">SIRLA-FJULIS</h1>
     <h2 id="title">SURVEY FORM</h2>
     <div id="form-outer">
-    <h3 id="title">讓我們多了解你(*´ω`)人(´ω`*)</h3>
-    <h4 id="title">第二部分：你的肝有多新鮮⸜(* ॑꒳ ॑* )⸝</h4>
-    <p id="description"></p>
-    <form id="survey-form" method="GET" action=" ">
+        <h3 id="title">讓我們多了解你(*´ω`)人(´ω`*)</h3>
+        <h4 id="title">第二部分：你的肝有多新鮮⸜(* ॑꒳ ॑* )⸝</h4>
+        <p id="description"></p>
 
-        <h4>你曾經「認識」過哪些程式語言？且能力如何？<br> </h4>
-        <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">C++<br></label>
-        </div>
+        <form id="survey-form" method="GET" action="result.php">
+            <h4>你曾經「認識」過哪些程式語言？且能力如何？<br> </h4>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">C++<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
-
-        <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">Java<br></label>
-        </div>
-
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">Java<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
 
-        <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">JavaScript<br></label>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">JavaScript<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">HTML<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
-         <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">HTML<br></label>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">Python<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                  <label for="preferences">PHP<br></label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
+                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
+                     </ul>
+                </div>
+            </div>
 
-        <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">Python<br></label>
-        </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">太小看我了，我不只會上面的程式語言！我還會...</label>
+                </div>
+                <div class="rightTab">
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="組合語言？沒有就填無~"></textarea>
+                </div>
+            </div>
 
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
+            <form>
+                <input id="submit" type="button" value="Previous" onclick="window.history.back().href='index.html';"/>
+                <input id="submit" type="button" value="Next" onclick="document.location.href='index3.html';"/>
+            </form>
 
-        <div class="rowTab">
-        <div class="labels">
-          <label for="preferences">PHP<br></label>
-        </div>
-
-        <div class="rightTab">
-            <ul id="preferences" style="list-style: none;">
-                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">不懂</label></li>
-                <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">略懂</li>
-                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">普通</label></li>
-                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">精通</label></li>
-             </ul>
-        </div>
-        </div>
-
-        <div class="rowTab">
-        <div class="labels">
-            <label for="comments">太小看我了，我不只會上面的程式語言！我還會...</label>
-        </div>
-
-        <div class="rightTab">
-            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="組合語言？沒有就填無~"></textarea>
-        </div>
+            <!--<input type ="button" onclick="javascript:location.href='thank you.html'" value="下一頁"></input>-->
+            <!--<button id="submit" type="buuton" onclick="history.back().href='index.html'">Previous</button>-->
+           <!-- <button id="submit" type="submit" onclick="javascript:location.href='index3.html'">Next</button>-->
+            <!--若type為submit會無法跳往下一頁(縱使都填資料了)，所以梗成button。但改成button似乎只是單純會往那頁過去而無法將資料回存至伺服器，不知道該怎麼辦QWQ。最後，我也有研究可以回上一頁或下一頁資料仍保留的寫法，但似乎依然要用BUTTON-->
+        </form>
     </div>
-
-    <form>
-        <input id="submit" type="button" value="Previous" onclick="window.history.back().href='index.html'" />
-        <input id="submit" type="button" value="Next" onclick="document.location.href='index3.html'" />
-    </form>
-
-     <form>
-        
-    </form>
-        <!--<input type ="button" onclick="javascript:location.href='thank you.html'" value="下一頁"></input>-->
-        <!--<button id="submit" type="buuton" onclick="history.back().href='index.html'">Previous</button>-->
-       <!-- <button id="submit" type="submit" onclick="javascript:location.href='index3.html'">Next</button>-->
-        <!--若type為submit會無法跳往下一頁(縱使都填資料了)，所以梗成button。但改成button似乎只是單純會往那頁過去而無法將資料回存至伺服器，不知道該怎麼辦QWQ。最後，我也有研究可以回上一頁或下一頁資料仍保留的寫法，但似乎依然要用BUTTON-->
-    </form>
-  </div>
-
 </body>
-
-
+</html>
