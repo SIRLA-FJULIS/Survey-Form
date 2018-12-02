@@ -2,6 +2,7 @@
 
 html,
 body {
+  margin-top: 50px;
   background-color: #a9d7d1;
   text-align: center;
   font-family:DFKai-sb;
@@ -12,7 +13,7 @@ body {
 .alert {
 	padding: 20px;
 	position: fixed;
-	top: 50%;
+	top: 5px;
 	left: 2%;
 	width: 96%;
 	background-color: green;
